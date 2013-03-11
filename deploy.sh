@@ -1,4 +1,7 @@
 #!/bin/sh
+cp ~/.gitshots/*.jpg content/images/
+mogrify -resize 460 content/images/*.jpg
+
 bundle exec rspec && bundle exec cucumber
 if [ $? -eq 0 ]
 then
