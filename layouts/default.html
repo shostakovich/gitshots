@@ -2,11 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>A Brand New nanoc Site - <%= @item[:title] %></title>
-
-    <meta name="generator" content="nanoc <%= Nanoc::VERSION %>"> 
+    <title>GitShots - <%= @item[:title] %></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>body { padding-top: 60px;}</style>
   </head>
   <body>
-    <%= yield %>
+    <div class="container">
+      <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="brand" href='/'>GitShots</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="active"><a href="/">Home</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%= yield %>
+    </div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
