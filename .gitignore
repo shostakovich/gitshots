@@ -5,3 +5,4 @@
 output/*
 content/images/*
 tmp
+crash.log
