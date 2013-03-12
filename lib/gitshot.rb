@@ -1,17 +1,15 @@
-class Gitshot
-  def self.all
-    files = []
-    Dir.foreach("/Users/shostakovich/.gitshots/") do |filename|
-      files << filename
-    end
-    files.select! {|filename| filename.match(/jpg$/) }
-    files.map { |file| Gitshot.new(file: file)}
-  end
+require 'time'
 
+class Gitshot
   attr_reader :file
 
   def initialize(options)
     @file = options[:file]
+  end
+
+  def date
+    date = file.match /[0-9]{4,4}-[0-9]{2,2}-[0-9]{2,2}/
+    Time.parse(date.to_s)
   end
 
   def path
