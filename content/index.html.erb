@@ -3,7 +3,7 @@ title: Home
 ---
 <h1>Commit Snapshots of Robert Curth</h1>
 
-<% GitshotRepository.new('/Users/shostakovich/.gitshots/').by_week.each do |week, shots| %>
+<% weekly_shots.each do |week, shots| %>
   <h2>Week <%= week %></h2>
   <% shots.each do |shot| %>
     <img src="<%= shot.path %>" width="460" />
