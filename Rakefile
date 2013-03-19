@@ -1,4 +1,6 @@
+require_relative './lib/configuration'
 require 'fileutils'
+
 SSH_SERVER='192.168.178.33'
 IMAGE_DIR='/Users/shostakovich/.gitshots'
 
@@ -7,7 +9,7 @@ task :default do
 end
 
 task :gen_deploy => :generate do
-  sh "rsync -avz output/ -e ssh #{SSH_SERVER}:/var/www/vhosts/git.mug.im/"
+  sh "rsync -avz output/ -e ssh #{APP_CONFIG['ssh_server']}:/var/www/vhosts/git.mug.im/"
 end
 
 task :generate => :compress_images do
@@ -23,7 +25,7 @@ end
 
 
 task :copy_images do
-  list = FileList.new("#{IMAGE_DIR}/*.jpg")
+  list = FileList.new("#{APP_CONFIG['image_dir']}/*.jpg")
   list.each do |original|
     targetDir='./content/images/'
     target = File.join targetDir, File.basename(original)
