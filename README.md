@@ -35,6 +35,14 @@ You can deploy using
 
     bundle exec rake gen_deploy
 
+## Contributing
+
+1. Fork it.
+2. Create a branch (`git checkout -b new_feature`)
+3. Commit your changes (`git commit -am "Makes it awesome"`)
+4. Push to the branch (`git push origin new_feature`)
+5. Open a [Pull Request][1]
+
 ## License
 
 Copyright (c) 2013 Robert Curth
@@ -47,4 +55,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Credits
 
-This project is inspired by [Katrina Owen](https://gist.github.com/kytrinyx/4489037). She had the idea of taking snapshots of yourself upon every commit.
+This project is inspired by [Katrina Owen][2]. She had the idea of taking snapshots of yourself upon every commit.
+
+[1]: https://github.com/shostakovich/gitshots/pulls
+[2]: https://gist.github.com/kytrinyx/4489037
