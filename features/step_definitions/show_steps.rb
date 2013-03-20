@@ -15,7 +15,7 @@ Given 'there is a gitshots' do
 end
 
 When 'I visit it' do
-  visit '/gitshot/2013-01-29-075249.cms/'
+  visit '/gitshot/2013-01-29-095917.cms/'
 end
 
 Then 'I should see informations about it' do

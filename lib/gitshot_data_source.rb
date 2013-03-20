@@ -3,8 +3,7 @@ module Nanoc3::DataSources
     identifier :gitshot
 
     def items
-      path = '/Users/shostakovich/.gitshots/'
-      GitshotRepository.new(path).all
+      GitshotRepository.new(APP_CONFIG['image_dir']).all
     end  
   end
 end
