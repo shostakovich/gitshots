@@ -1,1 +1,1 @@
-rvm use --create 2.0.0@gitshots
+rvm use --create 1.9.3@gitshots

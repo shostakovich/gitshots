@@ -1,13 +1,16 @@
 require 'capybara/poltergeist'
 require 'capybara/cucumber'
 
-Capybara.app_host = "http://localhost:8000/"
+main_dir = File.expand_path('../../../', File.dirname(__FILE__))
+output_dir = File.expand_path('../../output/', File.dirname(__FILE__))
+
+Capybara.app_host = "file://#{output_dir}/"
 Capybara.default_driver = :poltergeist
 
 Before do
-  @nanoc = Process.spawn('NANOC_ENV=test nanoc aco -p 8000 &> /dev/null')
+  `export NANOC_ENV=test; bundle exec nanoc compile`
 end
 
 After do
-  Process.kill("HUP", @nanoc)
+  `rm -rf output/*`
 end
