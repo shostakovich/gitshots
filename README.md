@@ -10,6 +10,7 @@ Status](https://travis-ci.org/shostakovich/gitshots.png)](https://travis-ci.org/
 ### Install imagesnap
 
     brew install imagesnap
+    brew install imagemagick
 
 ### Install the Git post-commit Hook
 
@@ -22,6 +23,17 @@ Status](https://travis-ci.org/shostakovich/gitshots.png)](https://travis-ci.org/
     git clone https://github.com/shostakovich/gitshots.git
     cd gitshots
     bundle install
+    
+## Usage
+
+Configure the directory of your images and the Rsync location of your server in config_production.yml
+
+    ssh_server: 192.168.178.33
+    image_dir: /home/foobar/.gitshots
+
+You can deploy using
+
+    bundle exec rake gen_deploy
 
 ## License
 
