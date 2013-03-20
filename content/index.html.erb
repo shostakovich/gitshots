@@ -6,6 +6,8 @@ title: Home
 <% weekly_shots.each do |week, shots| %>
   <h2>Week <%= week %></h2>
   <% shots.each do |shot| %>
-    <img src="<%= shot.path %>" width="460" />
+    <a href="<%= shot.detail_page_path %>">
+      <img src="<%= shot.path %>" width="460" />
+    </a>
   <% end %>  
 <% end %>
