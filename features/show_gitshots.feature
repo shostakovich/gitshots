@@ -7,3 +7,8 @@ Feature: Display gitshots
     Given some existing gitshots
     When I visit the list of gitshots
     Then I should see a list of gitshots
+
+  Scenario: View one gitshot
+    Given there is a gitshots
+    When I visit it
+    Then I should see informations about it
